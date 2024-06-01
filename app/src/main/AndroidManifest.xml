@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+
+    <application
+        android:name=".App"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.DevyaniProject"
+        tools:targetApi="31">
+
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAbIik5MMYd953yqw3xjMidShtMRtLY168" />
+
+        <service android:name=".myDemo.serviceDemo.UnBoundService" />
+        <service android:name=".myDemo.serviceDemo.BoundService" />
+        <service android:name=".myDemo.asynchrounsProgramming.ExampleIntentService" />
+        <service
+            android:name=".myDemo.firebase.FirebaseMessageReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <activity
+            android:name=".myDemo.serviceDemo.ActivityUnBoundService"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.serviceDemo.ActivityBoundService"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.menuDemo.ActivityOptionMenu"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.DarkActionBar" />
+        <activity
+            android:name=".myDemo.menuDemo.ActivityContextMenu"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.menuDemo.ActivityPopUpMenu"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.broadcastReceiverDemo.ActivityBroadcastReceiver"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.contentProviderDemo.ActivityContentProvider"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.androidContainers.listviewWithSearchview.ActivityListView"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.androidContainers.customListView.ActivityCustomListView"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.androidContainers.expandableListView.ActivityExpandableListView"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.androidContainers.ActivityWebView"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".mindorkjetpackcompose.text.TextStylingActivity"
+            android:exported="true"
+            android:label="@string/app_name"
+            android:theme="@style/Theme.DevyaniProject">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".myDemo.dataStorage.sharedPreferences.ActivitySharedPreferences"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.dataStorage.internalStorage.ActivityInternalStorage"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.dataStorage.sqlite.ActivitySqlite"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.retrofit.ActivityRetrofit"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.asynchrounsProgramming.ActivityAsyncTask"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.asynchrounsProgramming.ActivityIntentService"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.asynchrounsProgramming.ActivityCountDownTimer"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.imageLoadingDemo.ActivityImageLoading"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.androidContainers.recyclerview.ActivityRecyclerview"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.layouts.constraintLayoutDemo.ActivityConstraintLayout"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.firebase.ActivityNotification"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.firebase.ActivityFirebasePhoneAuthentication"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.darktheme.ActivityDarkTheme"
+            android:exported="true"
+            android:theme="@style/Theme.AppCompat.DayNight.NoActionBar" />
+        <activity
+            android:name=".myDemo.materialDesignComponents.ActivityBottomAppBar"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+        <activity
+            android:name=".myDemo.materialDesignComponents.bottomNavigationBar.ActivityBottomNavigationView"
+            android:exported="true"
+            android:theme="@style/Theme.MaterialComponents.Light.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.tabbedViews.TabbedViews"
+            android:exported="true"
+            android:label="@string/title_activity_tabbed_views"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.chips.ActivityChips"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.sliders.ActivitySliders"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.seekbar.ActivitySeekbar"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.datepicker.ActivityDatePicker"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.timepicker.ActivityTimePicker"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.progressindicator.ActivityProgressIndicators"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.snackbar.ActivitySnackBar"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.bottomsheet.ActivityBottomSheetDialog"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.dialogs.ActivityDialogs"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.dialogs.ActivityCustomAlertDialog"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.materialDesignComponents.navigationrail.ActivityNavigationRailView"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.databinding.simpledatabinding.ActivityDataBinding"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.databinding.bindingwithrecycler.ActivityRecyclerviewBinding"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.mvvm.simpleviewmodel.ActivitySimpleViewModel"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.mvvm.viewmodelwithdatabinding.ActivityViewModelWithDataBinding"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.mvvm.viewmodelwithretrofit.ActivityMovies"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.mvvm.viewmodelwithbaseobservable.ActivityViewModelWithBaseObservable"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.livedata.simplelivedata.ActivityLiveDataExample"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+
+        <activity
+            android:name=".myDemo.livedata.livedatamvvm.ActivityLiveDataMvvm"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.livedata.livedatawithretrofit.ActivityLiveDataWithRetrofit"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.layouts.coordinatorlayout.LayoutBasedActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".myDemo.layouts.coordinatorlayout.ScrollBasedActivity"
+            android:exported="true" />
+
+        <activity
+            android:name=".myDemo.layouts.coordinatorlayout.ActivityCoordinatorLayout"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.layouts.motionlayout.ActivityMotionLayout"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.downloadmanager.ActivityDownloadManager"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.paging.ActivityPaging"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.workmanager.ActivityWorkManager"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.googlemap.ActivityMap"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.googlemap.ActivityDisplayCurrentLocation"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.googlemap.ActivityRouteGoogleMap"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.googlemap.ActivityFusedLocationProvider"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.googlemap.ActivityInfoWindow"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.navigation.ActivityNavigation"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <!--      <activity
+                  android:name=".myDemo.hiltDI.main.view.ActivityHiltDI"
+                  android:exported="true"
+                  android:theme="@style/Theme.DevyaniProject.NoActionBar">
+
+                  <intent-filter>
+                      <action android:name="android.intent.action.MAIN" />
+
+                      <category android:name="android.intent.category.LAUNCHER" />
+                  </intent-filter>
+
+              </activity>-->
+
+        <activity
+            android:name=".myDemo.koinDIMVVM.main.view.ActivityKoin"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".myDemo.firebaserealtimedatabase.ArtistActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.firebaserealtimedatabase.ActivityRealtimeDatabase"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.firestoredatabase.ActivityAddFirestoreData"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.firestoredatabase.CourseDetails"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+
+        <activity
+            android:name=".myDemo.firestoredatabase.UpdateCourse"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar" />
+
+        <activity
+            android:name=".myDemo.rxjava.ui.SelectionActivity"
+            android:exported="true"
+            android:theme="@style/Theme.DevyaniProject.NoActionBar">
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".myDemo.rxjava.ui.OperatorsActivity"
+            android:label="@string/operators" />
+        <activity
+            android:name=".myDemo.rxjava.ui.search.SearchActivity"
+            android:label="@string/search" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.SimpleExampleActivity"
+            android:label="@string/simple" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.MapExampleActivity"
+            android:label="@string/map" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.ZipExampleActivity"
+            android:label="@string/zip" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.TimerExampleActivity"
+            android:label="@string/timer" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.FilterExampleActivity"
+            android:label="@string/filter" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.ConcatExampleActivity"
+            android:label="@string/concat" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.MergeExampleActivity"
+            android:label="@string/merge" />
+        <activity
+            android:name=".myDemo.rxjava.ui.operators.DelayExampleActivity"
+            android:label="@string/delay" />
+
+    </application>
+
+</manifest>

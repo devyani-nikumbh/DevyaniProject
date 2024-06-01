@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="model"
+            type="com.example.devyaniproject.myDemo.databinding.bindingwithrecycler.DataModel" />
+
+        <variable
+            name="itemClickListener"
+            type="com.example.devyaniproject.myDemo.databinding.bindingwithrecycler.CustomClickListener" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="@{() -> itemClickListener.cardClicked(model)}"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvAndroidName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.androidName}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+                android:visibility="@{model.isSuccess() == 0 ? View.GONE : View.VISIBLE}" />
+
+            <TextView
+                android:id="@+id/tvAndroidVersion"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{model.androidVersion}"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+                app:strikeThrough="@{true}" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                app:load_image="@{model.imageUrl'}" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "319742324696",
+    "project_id": "devyanidemoprojects",
+    "storage_bucket": "devyanidemoprojects.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:319742324696:android:c9a9bf3ec611da746bccad",
+        "android_client_info": {
+          "package_name": "com.example.devyaniproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyASNMsQxooA0EPvgMy42zBuB5uiSyRxWA8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

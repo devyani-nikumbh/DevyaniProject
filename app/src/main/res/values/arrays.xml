@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="slider_values">
+        <item>20.0</item>
+        <item>70.0</item>
+    </array>
+    
+    <array name="genres">
+        <item>Rock</item>
+        <item>Actor</item>
+        <item>Song</item>
+        <item>Dance</item>
+        <item>Modeling</item>
+        <item>Engineering</item>
+        <item>Doctor</item>
+
+    </array>
+    
+</resources>
